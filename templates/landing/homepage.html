@@ -45,7 +45,6 @@
         </div>
         <div class="span4">
           <h2>CMS Demo</h2>
-           {% show_placeholder "teaser" "teaser-cms-page" %}
           <p><a class="btn" href="#">View details &raquo;</a></p>
        </div>
         <div class="span4">
@@ -57,7 +56,7 @@
 
       <hr>
       
-      <form action="{% url facebook_connect %}?facebook_login=1" method="post">
+      <form action="{% url 'facebook_connect' %}?facebook_login=1" method="post">
          <input style="width: 184px; height: 26px" onclick="F.connect(this.parentNode.parentNode); return false;" type="image" src="http://e.fashiocdn.com/images/b_signin_facebook_small.png" /><br />
          Register, login or connect with facebook
          <input type="hidden" value="{{ request.path }}" name="next" />

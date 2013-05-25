@@ -1,5 +1,5 @@
 # Django
-django==1.4
+django==1.5.1
 
 # South for migrations
 south
@@ -10,17 +10,24 @@ git+git://github.com/earle/django-bootstrap.git
 # Django Facebook for registration and authentication 
 django_facebook
 
+# for jinja templating
+coffin
+jinja2
+
 # Python imaging library
 PIL
 
 # Sentry for logging errors
 raven
 
+# for compressing stuff
+django-compressor
+
 # CMS because that's always handy
 django-cms
 
 # Reversion because it's great to not lose changes
-reversion
+django-reversion
 
 # Replacement for manage.py runserver
 django-devserver

@@ -1,4 +1,4 @@
-import cjson
+import json
 
 from django import shortcuts as django_shortcuts
 from coffin import shortcuts as jinja_shortcuts
@@ -44,7 +44,7 @@ def _process_response(request, response):
     try:
         if isinstance(response, (dict, list)):
             if request.ajax:
-                output = json = cjson.encode(response)
+                output = json = json.dumps(response)
                 callback = request.GET.get('callback', False)
                 if callback:
                     output = '%s(%s)' % (callback, json)
